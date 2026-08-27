@@ -8,9 +8,8 @@
 }
 
 body {
-  font-family: var(--font-sans);
-  background-color: #f8fafc;
-  color: #0f172a;
+  background-color: #1e293b; /* azul oscuro */
+  color: #f1f5f9; /* texto claro */
 }
 
 .font-mono {
