@@ -9,8 +9,8 @@
 
 body {
   font-family: var(--font-sans);
-  background-color: #f8fafc; /* gris muy claro */
-  color: #0f172a; /* texto gris oscuro */
+  background: linear-gradient(to right, #06b6d4, #3b82f6); /* turquesa → azul */
+  color: #ffffff; /* texto blanco */
 }
 
 .font-mono {
