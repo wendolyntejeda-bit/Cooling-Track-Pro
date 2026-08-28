@@ -95,8 +95,8 @@ body {
 @page {
   size: 76mm 51mm;
   margin: 0mm !important;
+  orientation: landscape;
 }
-
 @media print {
   body * {
     visibility: hidden;
