@@ -93,9 +93,8 @@ body {
 
 /* Print Rules */
 @page {
-  size: 76mm 51mm;
-  margin: 0mm !important;
-  orientation: landscape;
+  size: 51mm 76mm landscape;
+}
 }
 @media print {
   body * {
