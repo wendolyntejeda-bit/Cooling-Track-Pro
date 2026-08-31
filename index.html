@@ -225,18 +225,63 @@
           </div>
 
           <!-- Instructions Card -->
-          <div class="glass-card rounded-3xl p-5 space-y-3">
-            <h3 class="text-xs font-extrabold uppercase text-slate-400 tracking-wider flex items-center gap-1.5">
-              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> Flujo Poka-Yoke en Piso
-            </h3>
-            
-            <div class="space-y-3 text-xs text-slate-600">
-              <div class="flex items-start gap-3">
-                <span class="w-6 h-6 rounded-xl bg-slate-900 text-white font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
-                <div>
-                  <b class="text-slate-800">Llegas al POD / CDU:</b> Escaneas el código QR del CDU físico. El sistema fija el equipo.
-                </div>
-              </div>
+          <div class="glass-card rounded-3xl p-5 space-y-4">
+
+  <h3 class="text-xs font-extrabold uppercase text-slate-400 tracking-wider flex items-center gap-1.5">
+    <i data-lucide="flask-conical" class="w-4 h-4 text-cyan-500"></i>
+    Panel de Laboratorio
+  </h3>
+
+  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+    <div class="text-xs text-slate-400 font-bold uppercase mb-2">
+      📍 CDU Seleccionado
+    </div>
+
+    <div class="font-black text-slate-800">
+      Sin CDU seleccionado
+    </div>
+
+    <div class="text-sm text-slate-500 mt-1">
+      Escanea un CDU para visualizar información.
+    </div>
+  </div>
+
+  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+    <div class="text-xs text-slate-400 font-bold uppercase mb-2">
+      🧪 Últimos Resultados
+    </div>
+
+    <div class="grid grid-cols-2 gap-2 text-sm">
+      <div>pH: --</div>
+      <div>Cond: --</div>
+      <div>Azoles: --</div>
+      <div>Bacterias: --</div>
+    </div>
+  </div>
+
+  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+    <div class="text-xs text-slate-400 font-bold uppercase mb-2">
+      📅 Próximo Muestreo
+    </div>
+
+    <div class="text-sm text-slate-700">
+      Sin programación
+    </div>
+  </div>
+
+  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+    <div class="text-xs text-slate-400 font-bold uppercase mb-2">
+      📊 Resumen General
+    </div>
+
+    <div class="space-y-1 text-sm">
+      <div>🟢 Al día: 8</div>
+      <div>🟡 Próximos: 6</div>
+      <div>🔴 Pendientes: 4</div>
+    </div>
+  </div>
+
+</div>
 
               <div class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-xl bg-slate-900 text-white font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
