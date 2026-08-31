@@ -330,7 +330,7 @@ this.cdus.forEach(cdu => {
               <span class="font-black text-slate-900 text-sm tracking-tight">${podName}</span>
              <span class="text-[10px] text-slate-500 font-bold uppercase bg-white px-2 py-0.5 rounded border border-slate-200">${cduList.length} CDUs</span>
             </div>
-            <span class="text-[10px] text-slate-400 font-mono font-medium">Rack Feed</span>
+            <span class="text-[10px] text-slate-400 font-mono font-medium">Monitoreo semanal</span>
           </div>
           <div class="divide-y divide-slate-100">
             ${cduRowsHtml}
