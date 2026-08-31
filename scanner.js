@@ -186,10 +186,10 @@ const PokaYokeScanner = {
     if (this.activeCDU) {
       badge?.classList.remove('hidden');
       if (nameEl) nameEl.textContent = `${this.activeCDU.id} (${this.activeCDU.pod})`;
-      if (promptEl) promptEl.textContent = `Paso 2: Ahora escanea el bote para ${this.activeCDU.id}`;
+      if (promptEl) promptEl.textContent = `🛢️ Escanea el contenedor asignado para validar la muestra`;
     } else {
       badge?.classList.add('hidden');
-      if (promptEl) promptEl.textContent = `Paso 1: Escanea el QR del CDU donde tomarás la muestra`;
+      if (promptEl) promptEl.textContent = `📍 Escanea un CDU para iniciar el muestreo`;
     }
   },
 
