@@ -29,10 +29,25 @@ const App = {
       const generatedCdus = [];
       const today = new Date();
 
-      for (let p = 1; p <= 20; p++) {
-        const podName = `POD-${String(p).padStart(2, '0')}`;
-        for (let c = 1; c <= 6; c++) {
-          const cduId = `CDU-P${String(p).padStart(2, '0')}-${String(c).padStart(2, '0')}`;
+      const podConfiguration = [
+  { pod: 'POD-01', cdus: 4 },
+  { pod: 'POD-02', cdus: 4 },
+  { pod: 'POD-03', cdus: 6 },
+  { pod: 'POD-04', cdus: 4 }
+];
+
+podConfiguration.forEach(config => {
+
+  const podName = config.pod;
+
+  const podNumber = parseInt(
+    podName.replace('POD-', '')
+  );
+
+  for (let c = 1; c <= config.cdus; c++) {
+
+    const cduId =
+      `CDU-P${String(podNumber).padStart(2, '0')}-${String(c).padStart(2, '0')}`;
           
           let daysAgo = 1;
           if (p >= 15 && p <= 17) daysAgo = 6;
