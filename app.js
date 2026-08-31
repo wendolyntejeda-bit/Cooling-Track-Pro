@@ -81,7 +81,7 @@ if (podNumber >= 4) daysAgo = 9;
             status: status
           });
         }
-      }
+     });
 
       this.cdus = generatedCdus;
 
