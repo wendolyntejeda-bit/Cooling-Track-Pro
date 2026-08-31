@@ -251,17 +251,15 @@ if (podNumber >= 4) daysAgo = 9;
     if (!container) return;
     container.innerHTML = '';
 
-    const podGroups = {};
-    for (let p = 1; p <= 20; p++) {
-      const podName = `POD-${String(p).padStart(2, '0')}`;
-      podGroups[podName] = [];
-    }
+  const podGroups = {};
 
-    this.cdus.forEach(cdu => {
-      if (podGroups[cdu.pod]) {
-        podGroups[cdu.pod].push(cdu);
-      }
-    });
+this.cdus.forEach(cdu => {
+  if (!podGroups[cdu.pod]) {
+    podGroups[cdu.pod] = [];
+  }
+
+  podGroups[cdu.pod].push(cdu);
+});
 
     Object.keys(podGroups).forEach(podName => {
       const cduList = podGroups[podName];
