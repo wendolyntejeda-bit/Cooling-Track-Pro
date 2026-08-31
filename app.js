@@ -386,19 +386,27 @@ this.cdus.forEach(cdu => {
     });
   },
 
-  populatePodSelectors() {
-    const selectors = [document.getElementById('map-pod-filter'), document.getElementById('label-pod-selector')];
-    selectors.forEach(sel => {
-      if (!sel || sel.options.length > 2) return;
-      for (let p = 1; p <= 20; p++) {
-        const podName = `POD-${String(p).padStart(2, '0')}`;
-        const opt = document.createElement('option');
-        opt.value = podName;
-        opt.textContent = podName;
-        sel.appendChild(opt);
-      }
+populatePodSelectors() {
+  const selectors = [
+    document.getElementById('map-pod-filter'),
+    document.getElementById('label-pod-selector')
+  ];
+
+  selectors.forEach(sel => {
+
+    if (!sel || sel.options.length > 2) return;
+
+    const pods = [...new Set(this.cdus.map(cdu => cdu.pod))];
+
+    pods.forEach(podName => {
+      const opt = document.createElement('option');
+      opt.value = podName;
+      opt.textContent = podName;
+      sel.appendChild(opt);
     });
-  },
+
+  });
+},
 
   filterMapByPod(pod) {
     this.selectedPodFilter = pod;
