@@ -45,6 +45,11 @@
         <button onclick="window.App.exportReport()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold transition-all">
           <i data-lucide="download" class="w-4 h-4 text-slate-600"></i> Exportar Excel
         </button>
+        <button onclick="document.getElementById('pods-admin-modal').classList.remove('hidden')"
+        class="inline-flex items-center gap-1.5 px-3 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-xl text-xs font-bold shadow-md transition-all">
+  <i data-lucide="settings" class="w-4 h-4"></i>
+  ⚙ Administrar PODs
+</button>
         <button onclick="document.getElementById('new-batch-modal').classList.remove('hidden')" class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white rounded-xl text-xs font-bold shadow-md shadow-emerald-700/20 transition-all">
           <i data-lucide="plus-circle" class="w-4 h-4"></i> + Alta de Bidones
         </button>
