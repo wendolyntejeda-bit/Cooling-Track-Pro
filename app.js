@@ -50,9 +50,9 @@ podConfiguration.forEach(config => {
       `CDU-P${String(podNumber).padStart(2, '0')}-${String(c).padStart(2, '0')}`;
           
           let daysAgo = 1;
-          if (p >= 15 && p <= 17) daysAgo = 6;
-          if (p >= 18) daysAgo = 9;
-
+        if (podNumber >= 3 && podNumber <= 3) daysAgo = 6;
+if (podNumber >= 4) daysAgo = 9;
+``
           const sampleDate = new Date(today);
           sampleDate.setDate(sampleDate.getDate() - daysAgo);
 
