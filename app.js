@@ -168,13 +168,13 @@ cdu.lastAzoles = params.azoles;
 cdu.notes = params.notes;
 
     // Evaluar estado de calidad
-    if (params.ph < 7.2 || params.ph > 9.1 || params.cond > 100 || params.biocide < 15) {
-      cdu.status = 'critical';
-    } else if (params.ph < 7.5 || params.ph > 8.8 || params.cond > 60 || params.biocide < 25) {
-      cdu.status = 'warning';
-    } else {
-      cdu.status = 'optimal';
-    }
+if (params.ph < 7.2 || params.ph > 9.1) {
+  cdu.status = 'critical';
+} else if (params.ph < 7.5 || params.ph > 8.8) {
+  cdu.status = 'warning';
+} else {
+  cdu.status = 'optimal';
+}
 
     this.saveData();
     this.renderAll();
