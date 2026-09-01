@@ -158,11 +158,14 @@ lastAzoles: azoles,
     const todayStr = new Date().toISOString().split('T')[0];
     cdu.lastSample = todayStr;
     cdu.daysAgo = 0;
-    cdu.lastPH = params.ph;
-    cdu.lastConductivity = params.cond;
-    cdu.lastBiocide = params.biocide;
-    cdu.lastGlycol = params.glycol;
-    cdu.notes = params.notes;
+   cdu.lastPH = params.ph;
+cdu.lastConductivity = params.conductivity;
+cdu.lastTurbidity = params.turbidity;
+cdu.lastTSS = params.tss;
+cdu.lastTDS = params.tds;
+cdu.lastBacteria = params.bacteria;
+cdu.lastAzoles = params.azoles;
+cdu.notes = params.notes;
 
     // Evaluar estado de calidad
     if (params.ph < 7.2 || params.ph > 9.1 || params.cond > 100 || params.biocide < 15) {
