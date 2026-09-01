@@ -247,9 +247,9 @@ const PokaYokeScanner = {
           <div class="p-5 space-y-4 text-xs">
             <div class="flex items-center justify-between border-b pb-2 border-slate-100">
               <span class="font-bold text-slate-700 flex items-center gap-1.5">
-                <i data-lucide="activity" class="w-4 h-4 text-emerald-600"></i> Registrar Parámetros Químicos de la Muestra:
+                <i data-lucide="activity" class="w-4 h-4 text-emerald-600"></i> Registrar Toma de Muestra:
               </span>
-              <span class="text-[11px] text-slate-400">Opcional / Rápido</span>
+              <span class="text-[11px] text-slate-400">Pendiente de Análisis</span>
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
