@@ -340,6 +340,29 @@ this.cdus.forEach(cdu => {
 
       container.appendChild(podCard);
     });
+    // TARJETA AGREGAR POD
+const addPodCard = document.createElement('div');
+
+addPodCard.className =
+  'glass-card rounded-3xl border-2 border-dashed border-slate-300 hover:border-cyan-500 transition-all cursor-pointer flex flex-col items-center justify-center min-h-[250px]';
+
+addPodCard.onclick = () => {
+  document.getElementById('pods-admin-modal').classList.remove('hidden');
+};
+
+addPodCard.innerHTML = `
+  <div class="text-5xl mb-4 text-cyan-500">➕</div>
+
+  <div class="text-xl font-extrabold text-slate-700">
+    Agregar POD
+  </div>
+
+  <div class="text-sm text-slate-500 text-center mt-2 px-4">
+    Crear un nuevo POD y definir la cantidad de CDUs
+  </div>
+`;
+
+container.appendChild(addPodCard);
   },
 
   renderBatches() {
