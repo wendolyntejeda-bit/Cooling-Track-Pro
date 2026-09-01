@@ -163,6 +163,11 @@ const PokaYokeScanner = {
       if (cleanBoteId.includes(cleanCduId) || this.activeCDU.id.toUpperCase().includes(cleanBoteId)) {
         // MATCH 100% CORRECTO
         this.playSound('match');
+        this.activeCDU.sampleStatus = 'taken';
+
+window.App.saveData();
+
+window.App.renderAll();
         this.showPokaYokeResult('MATCH', {
           cdu: this.activeCDU,
           boteId: item.id
