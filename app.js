@@ -325,11 +325,11 @@ this.cdus.forEach(cdu => {
             
             <!-- Parameters Micro Strip -->
             <div class="flex items-center gap-3 text-[10px] font-mono text-slate-500 bg-slate-50 px-2 py-1 rounded">
-              <span>pH: <b class="text-slate-800">${cdu.lastPH || '--'}</b></span>
-              <span>Cond: <b class="text-slate-800">${cdu.lastConductivity || '--'}µS</b></span>
-              <span>Biocida: <b class="text-teal-700">${cdu.lastBiocide || '--'}PPM</b></span>
-            </div>
-          </div>
+  <span>pH: <b>${cdu.lastPH || '--'}</b></span>
+  <span>Cond: <b>${cdu.lastConductivity || '--'}µS</b></span>
+  <span>Turb: <b>${cdu.lastTurbidity || '--'} NTU</b></span>
+  <span>Bact: <b>${cdu.lastBacteria || '--'} UFC</b></span>
+</div>
         `;
       });
 
