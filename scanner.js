@@ -248,27 +248,23 @@ const PokaYokeScanner = {
             <div class="flex items-center justify-between border-b pb-2 border-slate-100">
               <span class="font-bold text-slate-700 flex items-center gap-1.5">
                 <i data-lucide="activity" class="w-4 h-4 text-emerald-600"></i> Registrar Toma de Muestra:
+                <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-center">
+
+  <div class="text-lg font-black text-emerald-700">
+    ✅ MUESTRA VALIDADA
+  </div>
+
+  <div class="text-sm text-slate-600 mt-2">
+    La muestra fue asociada correctamente al CDU y al contenedor.
+  </div>
+
+  <div class="text-xs text-slate-500 mt-2">
+    Estado: Pendiente de análisis de laboratorio
+  </div>
+
+</div>
               </span>
               <span class="text-[11px] text-slate-400">Pendiente de Análisis</span>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div>
-                <label class="block font-bold text-slate-600 mb-1">pH (7.5 - 8.8)</label>
-                <input type="number" step="0.1" id="match-input-ph" value="${c.lastPH || 8.2}" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-2 font-mono font-bold text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none text-center text-sm">
-              </div>
-              <div>
-                <label class="block font-bold text-slate-600 mb-1">Conductividad (µS)</label>
-                <input type="number" step="1" id="match-input-cond" value="${c.lastConductivity || 42}" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-2 font-mono font-bold text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none text-center text-sm">
-              </div>
-              <div>
-                <label class="block font-bold text-slate-600 mb-1">Biocida (PPM)</label>
-                <input type="number" step="1" id="match-input-biocide" value="${c.lastBiocide || 35}" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-2 font-mono font-bold text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none text-center text-sm">
-              </div>
-              <div>
-                <label class="block font-bold text-slate-600 mb-1">% Glicol</label>
-                <input type="number" step="1" id="match-input-glycol" value="${c.lastGlycol || 25}" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-2 font-mono font-bold text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none text-center text-sm">
-              </div>
             </div>
 
             <div>
