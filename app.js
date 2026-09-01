@@ -63,7 +63,11 @@ if (podNumber >= 4) daysAgo = 9;
           // Parámetros químicos simulados para la demo
           const ph = +(8.0 + (Math.random() * 0.5 - 0.2)).toFixed(1);
           const cond = Math.floor(35 + Math.random() * 20);
-          const biocide = Math.floor(30 + Math.random() * 15);
+          const turbidity = +(Math.random() * 3).toFixed(1);
+const tss = Math.floor(10 + Math.random() * 40);
+const tds = Math.floor(50 + Math.random() * 200);
+const bacteria = Math.floor(50 + Math.random() * 500);
+const azoles = Math.floor(800 + Math.random() * 800);
 
           generatedCdus.push({
             id: cduId,
