@@ -282,7 +282,7 @@ const PokaYokeScanner = {
                 <i data-lucide="check" class="w-4 h-4"></i> Registrar Muestra
               </button>
               <button onclick="window.App.registerWeeklySample('${c.id}'); window.PokaYokeScanner.resetScanner();" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition-colors">
-                Solo Fecha (Rápido)
+                Validar y cerrar
               </button>
             </div>
           </div>
