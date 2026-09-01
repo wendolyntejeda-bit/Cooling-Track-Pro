@@ -79,8 +79,11 @@ const azoles = Math.floor(800 + Math.random() * 800);
             daysAgo: daysAgo,
             lastPH: ph,
             lastConductivity: cond,
-            lastBiocide: biocide,
-            lastGlycol: 25,
+            lastTurbidity: turbidity,
+lastTSS: tss,
+lastTDS: tds,
+lastBacteria: bacteria,
+lastAzoles: azoles,
             notes: 'Parámetros en especificación normal.',
             status: status
           });
