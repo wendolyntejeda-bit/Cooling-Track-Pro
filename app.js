@@ -318,9 +318,9 @@ this.cdus.forEach(cdu => {
               </div>
               <div class="flex items-center gap-2">
                 ${statusBadge}
-                <button onclick="window.PokaYokeScanner.simulate('cdu', '${cdu.id}'); window.App.switchTab('scanner');" class="text-sky-600 hover:text-sky-800 font-bold text-[11px] bg-sky-50 hover:bg-sky-100 px-2 py-0.5 rounded transition-colors">
-                  Muestrear
-                </button>
+               <button onclick="window.PokaYokeScanner.simulate('cdu', '${cdu.id}');window.App.switchTab('scanner');"class="...">
+  🧪 Capturar Resultados
+</button>
               </div>
             </div>
           
