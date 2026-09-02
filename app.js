@@ -331,22 +331,36 @@ if (cdu.sampleStatus === 'analyzed') {
           statusBadge = `<span class="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200">Próximo (${cdu.daysAgo}d)</span>`;
         }
 
-        cduRowsHtml += `
-          <div class="py-2.5 px-3.5 flex flex-col gap-1.5 border-b border-slate-100 last:border-0 hover:bg-slate-50/60 transition-colors">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full ${dotColor}"></span>
-                <span class="font-mono font-black text-slate-900 text-xs">${cdu.id.split('-').slice(1).join('-')}</span>
-              </div>
-              <div class="grid grid-cols-[1fr_auto] items-center">
-             <button
+       cduRowsHtml += `
+<div
   onclick="window.App.openAnalysisModal('${cdu.id}')"
-  class="px-3 py-1.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-[11px] font-bold transition-all"> 🧪 
-</button>
-              </div>
-            </div>
-          
-        `;
+  class="
+    cursor-pointer
+    bg-white
+    border
+    border-slate-200
+    rounded-xl
+    p-3
+    hover:border-sky-500
+    hover:shadow-md
+    transition-all
+    text-center
+  "
+>
+
+  <div class="w-2 h-2 rounded-full ${dotColor} mx-auto mb-2"></div>
+
+  <div class="font-black text-slate-800 text-sm">
+    ${cdu.id.split('-').slice(-1)[0]}
+  </div>
+
+  <div class="text-[10px] text-slate-400 mt-1">
+    CDU
+  </div>
+
+</div>
+`;
+        
       });
 
       podCard.innerHTML = `
