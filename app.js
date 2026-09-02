@@ -663,6 +663,21 @@ openAnalysisModal(cduId) {
 
   const cdu = this.cdus.find(c => c.id === cduId);
 
+  const modeLabel =
+  document.getElementById('analysis-mode');
+
+if (modeLabel) {
+
+  if (cdu.lastPH || cdu.lastConductivity) {
+    modeLabel.textContent =
+      '✏️ Editando resultados existentes';
+  } else {
+    modeLabel.textContent =
+      '🧪 Nuevo análisis';
+  }
+
+}
+
   if (!cdu) return;
 
   document.getElementById('analysis-cdu-id').textContent = cduId;
