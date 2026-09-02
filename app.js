@@ -578,10 +578,38 @@ openAnalysisModal(cduId) {
 
   if (!modal) return;
 
+  const cdu = this.cdus.find(c => c.id === cduId);
+
+  if (!cdu) return;
+
   document.getElementById('analysis-cdu-id').textContent = cduId;
 
+  document.getElementById('analysis-ph').value =
+    cdu.lastPH || '';
+
+  document.getElementById('analysis-conductivity').value =
+    cdu.lastConductivity || '';
+
+  document.getElementById('analysis-turbidity').value =
+    cdu.lastTurbidity || '';
+
+  document.getElementById('analysis-tss').value =
+    cdu.lastTSS || '';
+
+  document.getElementById('analysis-tds').value =
+    cdu.lastTDS || '';
+
+  document.getElementById('analysis-bacteria').value =
+    cdu.lastBacteria || '';
+
+  document.getElementById('analysis-azoles').value =
+    cdu.lastAzoles || '';
+
+  document.getElementById('analysis-notes').value =
+    cdu.notes || '';
+
   modal.classList.remove('hidden');
-  
+
 }
   
 };
