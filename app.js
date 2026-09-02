@@ -578,6 +578,7 @@ populatePodSelectors() {
   cdu.sampleStatus = 'analyzed';
 
   this.saveData();
+  this.renderAll();  
 
   document
     .getElementById('analysis-modal')
