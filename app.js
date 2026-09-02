@@ -237,13 +237,15 @@ if (params.ph < 7.2 || params.ph > 9.1) {
     return this.cdus.filter(c => c.pod === podFilter);
   },
 
-  renderAll() {
-    this.renderKPIs();
-    this.renderPODMap();
-    this.renderBatches();
-    this.populatePodSelectors();
-    if (window.lucide) lucide.createIcons();
-  },
+ renderAll() {
+  this.renderKPIs();
+  this.renderPODMap();
+  this.renderBatches();
+  this.populatePodSelectors();
+  this.populateWeeklyPodSelector();
+
+  if (window.lucide) lucide.createIcons();
+},
 
   renderKPIs() {
     const total = this.cdus.length;
