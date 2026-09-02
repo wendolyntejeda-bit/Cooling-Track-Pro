@@ -372,9 +372,9 @@ if (cdu.sampleStatus === 'analyzed') {
             </div>
             <span class="text-[10px] text-slate-400 font-mono font-medium">Monitoreo semanal</span>
           </div>
-          <div class="divide-y divide-slate-100">
-            ${cduRowsHtml}
-          </div>
+          <div class="grid grid-cols-2 gap-3 p-3">
+  ${cduRowsHtml}
+</div>
         </div>
       `;
 
