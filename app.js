@@ -331,24 +331,40 @@ if (cdu.sampleStatus === 'analyzed') {
           statusBadge = `<span class="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200">Próximo (${cdu.daysAgo}d)</span>`;
         }
 
+let cardStyle =
+  'from-white to-slate-50 border-slate-200';
+
+if (cdu.sampleStatus === 'not_taken') {
+  cardStyle =
+    'from-rose-50 to-white border-rose-200';
+}
+
+if (cdu.sampleStatus === 'taken') {
+  cardStyle =
+    'from-amber-50 to-white border-amber-200';
+}
+
+if (cdu.sampleStatus === 'analyzed') {
+  cardStyle =
+    'from-emerald-50 to-white border-emerald-200';
+}
+        
        cduRowsHtml += `
 <div
   onclick="window.App.openAnalysisModal('${cdu.id}')"
-  class="
+ class="
     cursor-pointer
     rounded-2xl
     p-4
     border
-    border-slate-200
     transition-all
     hover:shadow-xl
     hover:scale-105
     hover:border-sky-400
     bg-gradient-to-br
-    from-white
-    to-slate-50
+    ${cardStyle}
     text-center
-  "
+"
 >
 
   <div class="w-3 h-3 rounded-full ${dotColor} mx-auto mb-3"></div>
