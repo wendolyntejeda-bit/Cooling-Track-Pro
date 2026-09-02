@@ -339,7 +339,7 @@ if (cdu.sampleStatus === 'analyzed') {
                 <span class="font-mono font-black text-slate-900 text-xs">${cdu.id.split('-').slice(1).join('-')}</span>
               </div>
               <div class="flex items-center gap-2">
-               <button onclick="window.PokaYokeScanner.simulate('cdu', '${cdu.id}');window.App.switchTab('scanner');"class="...">
+              <button onclick="window.App.openAnalysisModal('${cdu.id}')"class="...">
   🧪 Capturar Resultados
 </button>
               </div>
