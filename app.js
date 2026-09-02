@@ -85,6 +85,7 @@ lastTDS: tds,
 lastBacteria: bacteria,
 lastAzoles: azoles,
             notes: 'Parámetros en especificación normal.',
+            history: [],
             sampleStatus: 'not_taken',
             status: status
           });
