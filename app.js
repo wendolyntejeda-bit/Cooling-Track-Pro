@@ -472,6 +472,40 @@ container.appendChild(addPodCard);
   },
 
 populatePodSelectors() {
+  populateWeeklyPodSelector() {
+
+  const selector =
+    document.getElementById('weekly-pod-selector');
+
+  if (!selector) return;
+
+  selector.innerHTML = '';
+
+  const pods =
+    [...new Set(this.cdus.map(cdu => cdu.pod))];
+
+  pods.forEach(podName => {
+
+    const pending =
+      this.cdus.filter(
+        c =>
+          c.pod === podName &&
+          c.sampleStatus === 'taken'
+      ).length;
+
+    const option =
+      document.createElement('option');
+
+    option.value = podName;
+
+    option.textContent =
+      `${podName} (${pending} pendientes)`;
+
+    selector.appendChild(option);
+
+  });
+
+}
   const selectors = [
     document.getElementById('map-pod-filter'),
     document.getElementById('label-pod-selector')
