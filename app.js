@@ -336,26 +336,29 @@ if (cdu.sampleStatus === 'analyzed') {
   onclick="window.App.openAnalysisModal('${cdu.id}')"
   class="
     cursor-pointer
-    bg-white
+    rounded-2xl
+    p-4
     border
     border-slate-200
-    rounded-xl
-    p-3
-    hover:border-sky-500
-    hover:shadow-md
     transition-all
+    hover:shadow-xl
+    hover:scale-105
+    hover:border-sky-400
+    bg-gradient-to-br
+    from-white
+    to-slate-50
     text-center
   "
 >
 
-  <div class="w-2 h-2 rounded-full ${dotColor} mx-auto mb-2"></div>
+  <div class="w-3 h-3 rounded-full ${dotColor} mx-auto mb-3"></div>
 
-  <div class="font-black text-slate-800 text-sm">
-    ${cdu.id.split('-').slice(-1)[0]}
+  <div class="font-black text-slate-800 text-lg">
+    CDU-${String(cdu.cduIndex).padStart(2,'0')}
   </div>
 
-  <div class="text-[10px] text-slate-400 mt-1">
-    CDU
+  <div class="text-[10px] uppercase tracking-widest text-slate-400 mt-2">
+    Analizar
   </div>
 
 </div>
