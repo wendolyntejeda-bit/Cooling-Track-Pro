@@ -471,7 +471,6 @@ container.appendChild(addPodCard);
     });
   },
 
-populatePodSelectors() {
   populateWeeklyPodSelector() {
 
   const selector =
@@ -505,7 +504,10 @@ populatePodSelectors() {
 
   });
 
-}
+},
+
+populatePodSelectors() {
+
   const selectors = [
     document.getElementById('map-pod-filter'),
     document.getElementById('label-pod-selector')
@@ -515,7 +517,8 @@ populatePodSelectors() {
 
     if (!sel || sel.options.length > 2) return;
 
-    const pods = [...new Set(this.cdus.map(cdu => cdu.pod))];
+    const pods =
+      [...new Set(this.cdus.map(cdu => cdu.pod))];
 
     pods.forEach(podName => {
       const opt = document.createElement('option');
@@ -525,8 +528,8 @@ populatePodSelectors() {
     });
 
   });
-},
 
+},
   filterMapByPod(pod) {
     this.selectedPodFilter = pod;
     this.renderPODMap();
