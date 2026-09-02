@@ -524,6 +524,54 @@ populatePodSelectors() {
     setTimeout(() => toast.classList.add('hidden'), 3500);
   },
 
+  saveAnalysisResults() {
+
+  const cduId =
+    document.getElementById('analysis-cdu-id').textContent;
+
+  const cdu =
+    this.cdus.find(c => c.id === cduId);
+
+  if (!cdu) return;
+
+  cdu.lastPH =
+    document.getElementById('analysis-ph').value;
+
+  cdu.lastConductivity =
+    document.getElementById('analysis-conductivity').value;
+
+  cdu.lastTurbidity =
+    document.getElementById('analysis-turbidity').value;
+
+  cdu.lastTSS =
+    document.getElementById('analysis-tss').value;
+
+  cdu.lastTDS =
+    document.getElementById('analysis-tds').value;
+
+  cdu.lastBacteria =
+    document.getElementById('analysis-bacteria').value;
+
+  cdu.lastAzoles =
+    document.getElementById('analysis-azoles').value;
+
+  cdu.notes =
+    document.getElementById('analysis-notes').value;
+
+  cdu.sampleStatus = 'analyzed';
+
+  this.saveData();
+
+  document
+    .getElementById('analysis-modal')
+    .classList.add('hidden');
+
+  this.showToast(
+    `✅ Resultados guardados para ${cduId}`,
+    'success'
+  );
+},
+
 openAnalysisModal(cduId) {
 
   const modal = document.getElementById('analysis-modal');
