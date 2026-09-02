@@ -370,19 +370,119 @@ class="flex items-center gap-2 px-4 py-2 rounded-xl text-slate-500 hover:text-sl
 
   <div class="glass-card rounded-3xl p-5">
 
-    <label class="block font-bold text-slate-700 mb-2">
-      Seleccionar POD
-    </label>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-    <select id="weekly-pod-selector"
-            class="w-full border border-slate-300 rounded-xl px-3 py-2">
+      <div>
+        <label class="block font-bold text-slate-700 mb-2">
+          POD con pendientes
+        </label>
 
-      <option>POD-01</option>
-      <option>POD-02</option>
-      <option>POD-03</option>
-      <option>POD-04</option>
+        <select
+          id="weekly-pod-selector"
+          class="w-full border border-slate-300 rounded-xl px-3 py-2">
 
-    </select>
+          <option>POD-01 (4 pendientes)</option>
+          <option>POD-02 (2 pendientes)</option>
+          <option>POD-04 (1 pendiente)</option>
+
+        </select>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
+
+        <div class="font-bold text-slate-700 mb-2">
+          Límites de aceptación
+        </div>
+
+        <div class="text-xs text-slate-600 space-y-1">
+
+          <div>ATP &lt; 1500 RLU</div>
+          <div>pH 8.0 - 9.5</div>
+          <div>Conductividad 600 - 700 µS</div>
+          <div>TDS &lt; 1000 ppm</div>
+          <div>Turbidez &lt; 10 NTU</div>
+          <div>TSS &lt; 5 ppm</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="glass-card rounded-3xl p-5">
+
+    <div class="overflow-x-auto">
+
+      <table class="w-full text-sm">
+
+        <thead>
+
+          <tr class="border-b">
+
+            <th class="py-2 text-left">CDU</th>
+            <th>ATP</th>
+            <th>TSS</th>
+            <th>Turbidez</th>
+            <th>Cond.</th>
+            <th>TDS</th>
+            <th>pH</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr class="border-b">
+            <td class="py-3 font-bold">CDU-01</td>
+            <td><input type="number" class="w-20 border rounded px-2 py-1"></td>
+            <td><input type="number" class="w-20 border rounded px-2 py-1"></td>
+            <td><input type="number" class="w-20 border rounded px-2 py-1"></td>
+            <td><input type="number" class="w-20 border rounded px-2 py-1"></td>
+            <td><input type="number" class="w-20 border rounded px-2 py-1"></td>
+            <td><input type="number" step="0.1" class="w-20 border rounded px-2 py-1"></td>
+          </tr>
+
+          <tr class="border-b">
+            <td class="py-3 font-bold">CDU-02</td>
+            <td><input type="number" class="w-20 border rounded px-2 py-1"></td>
+            <td><input type="number" class="w-20 border rounded px-2 py-1"></td>
+            <td><input type="number" class="w-20 border rounded px-2 py-1"></td>
+            <td><input type="number" class="w-20 border rounded px-2 py-1"></td>
+            <td><input type="number" class="w-20 border rounded px-2 py-1"></td>
+            <td><input type="number" step="0.1" class="w-20 border rounded px-2 py-1"></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <div class="mt-6">
+
+      <label class="block font-bold text-slate-700 mb-2">
+        Observaciones generales del POD
+      </label>
+
+      <textarea
+        rows="3"
+        class="w-full border border-slate-300 rounded-xl p-3"></textarea>
+
+    </div>
+
+    <div class="mt-6 text-right">
+
+      <button
+        class="px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold">
+
+        💾 Guardar POD
+
+      </button>
+
+    </div>
 
   </div>
 
