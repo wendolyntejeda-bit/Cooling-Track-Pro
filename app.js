@@ -299,6 +299,28 @@ this.cdus.forEach(cdu => {
       let cduRowsHtml = '';
       cduList.forEach(cdu => {
         let dotColor = 'bg-emerald-500';
+        let sampleBadge = '';
+
+if (cdu.sampleStatus === 'not_taken') {
+  sampleBadge = `
+    <span class="text-[10px] font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-200">
+      🔴 Sin muestra
+    </span>`;
+}
+
+if (cdu.sampleStatus === 'taken') {
+  sampleBadge = `
+    <span class="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200">
+      🟡 Pendiente análisis
+    </span>`;
+}
+
+if (cdu.sampleStatus === 'analyzed') {
+  sampleBadge = `
+    <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+      🟢 Analizado
+    </span>`;
+}
         let statusBadge = `<span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">Al Día</span>`;
 
         if (cdu.status === 'critical') {
