@@ -483,14 +483,20 @@ container.appendChild(addPodCard);
   const pods =
     [...new Set(this.cdus.map(cdu => cdu.pod))];
 
-  pods.forEach(podName => {
+  let podsWithPending = 0;
 
-    const pending =
-      this.cdus.filter(
-        c =>
-          c.pod === podName &&
-          c.sampleStatus === 'taken'
-      ).length;
+pods.forEach(podName => {
+
+  const pending =
+    this.cdus.filter(
+      c =>
+        c.pod === podName &&
+        c.sampleStatus === 'taken'
+    ).length;
+
+  if (pending > 0) {
+
+    podsWithPending++;
 
     const option =
       document.createElement('option');
@@ -502,7 +508,21 @@ container.appendChild(addPodCard);
 
     selector.appendChild(option);
 
-  });
+  }
+
+});
+
+if (podsWithPending === 0) {
+
+  const option =
+    document.createElement('option');
+
+  option.textContent =
+    '✅ No hay PODs pendientes';
+
+  selector.appendChild(option);
+
+}
 
 },
 
