@@ -536,7 +536,8 @@ openAnalysisModal(cduId) {
   modal.classList.remove('hidden');
   
 }
-};
+  
+},
   
 window.App = App;
 document.addEventListener('DOMContentLoaded', () => App.init());
