@@ -524,20 +524,52 @@ populatePodSelectors() {
   },
 
   // Exportar reporte completo con todos los parámetros químicos a Excel
-  exportReport() {
-    let csv = "POD,CDU_ID,ESTADO,ULTIMO_MUESTREO,DIAS_SIN_MUESTREO,PH,CONDUCTIVIDAD_US,BIOCIDA_PPM,GLICOL_PORCENTAJE,BOTE_FIJO,OBSERVACIONES\n";
-    this.cdus.forEach(c => {
-      csv += `"${c.pod}","${c.id}","${c.status}","${c.lastSample}",${c.daysAgo},${c.lastPH || ''},${c.lastConductivity || ''},${c.lastBiocide || ''},${c.lastGlycol || 25},"${c.fixedBoteId}","${c.notes || ''}"\n`;
-    });
+  // Exportar reporte de laboratorio
+exportReport() {
 
-    const blob = new Blob(["\uFEFF" + csv], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `Reporte_Calidad_120_CDUs_${new Date().toISOString().split('T')[0]}.csv`;
-    a.click();
-    this.showToast("📥 Reporte completo descargado con parámetros para Excel", "success");
-  },
+  let csv =
+    "POD,CDU_ID,ESTADO_MUESTRA,FECHA_MUESTRA,PH,CONDUCTIVIDAD,TURBIDEZ,TSS,TDS,BACTERIAS,AZOLES,OBSERVACIONES\n";
+
+  this.cdus.forEach(c => {
+
+    csv +=
+      `"${c.pod}",` +
+      `"${c.id}",` +
+      `"${c.sampleStatus || ''}",` +
+      `"${c.lastSample || ''}",` +
+      `"${c.lastPH || ''}",` +
+      `"${c.lastConductivity || ''}",` +
+      `"${c.lastTurbidity || ''}",` +
+      `"${c.lastTSS || ''}",` +
+      `"${c.lastTDS || ''}",` +
+      `"${c.lastBacteria || ''}",` +
+      `"${c.lastAzoles || ''}",` +
+      `"${c.notes || ''}"\n`;
+
+  });
+
+  const blob =
+    new Blob(
+      ["\uFEFF" + csv],
+      { type: 'text/csv;charset=utf-8;' }
+    );
+
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+
+  a.href = url;
+
+  a.download =
+    `Reporte_Laboratorio_${new Date().toISOString().split('T')[0]}.csv`;
+
+  a.click();
+
+  this.showToast(
+    "📥 Reporte de laboratorio descargado",
+    "success"
+  );
+},
 
   showToast(msg, type = 'info') {
     const toast = document.getElementById('toast-notification');
