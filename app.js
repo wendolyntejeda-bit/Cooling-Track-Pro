@@ -338,11 +338,10 @@ if (cdu.sampleStatus === 'analyzed') {
                 <span class="w-2 h-2 rounded-full ${dotColor}"></span>
                 <span class="font-mono font-black text-slate-900 text-xs">${cdu.id.split('-').slice(1).join('-')}</span>
               </div>
-              <div class="flex items-center gap-2">
+              <div class="grid grid-cols-[1fr_auto] items-center">
              <button
   onclick="window.App.openAnalysisModal('${cdu.id}')"
-  class="px-3 py-1.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-[11px] font-bold transition-all">
-  🧪 Capturar Resultados
+  class="px-3 py-1.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-[11px] font-bold transition-all"> 🧪 
 </button>
               </div>
             </div>
