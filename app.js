@@ -522,7 +522,6 @@ populatePodSelectors() {
 
     setTimeout(() => toast.classList.add('hidden'), 3500);
   }
-};
 
 openAnalysisModal(cduId) {
 
