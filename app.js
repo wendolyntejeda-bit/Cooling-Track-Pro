@@ -626,6 +626,22 @@ exportReport() {
 
   cdu.sampleStatus = 'analyzed';
 
+if (!cdu.history) {
+  cdu.history = [];
+}
+
+cdu.history.push({
+  date: new Date().toISOString(),
+  ph: cdu.lastPH,
+  conductivity: cdu.lastConductivity,
+  turbidity: cdu.lastTurbidity,
+  tss: cdu.lastTSS,
+  tds: cdu.lastTDS,
+  bacteria: cdu.lastBacteria,
+  azoles: cdu.lastAzoles,
+  notes: cdu.notes
+});
+    
   this.saveData();
   this.renderAll();  
 
