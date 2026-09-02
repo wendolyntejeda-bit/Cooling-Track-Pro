@@ -532,7 +532,7 @@ openAnalysisModal(cduId) {
   document.getElementById('analysis-cdu-id').textContent = cduId;
 
   modal.classList.remove('hidden');
-},
+}
 
 window.App = App;
 document.addEventListener('DOMContentLoaded', () => App.init());
